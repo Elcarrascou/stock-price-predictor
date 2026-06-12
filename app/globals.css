@@ -6,6 +6,11 @@
   color-scheme: light;
 }
 
+/* Sube ~6% el tamaño base: escala toda la tipografía (rem) de forma uniforme. */
+html {
+  font-size: 17px;
+}
+
 body {
   background:
     radial-gradient(900px 400px at 80% -10%, rgba(0, 127, 163, 0.12) 0%, transparent 60%),

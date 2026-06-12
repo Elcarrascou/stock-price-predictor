@@ -61,7 +61,7 @@ export default function DocsPage() {
           como aplicación serverless en la nube
         </p>
 
-        <div className="mt-12 space-y-1.5 text-sm text-slate-600">
+        <div className="mt-12 space-y-2 text-base text-slate-600">
           <p>
             <span className="font-semibold text-usach-navy">Ramo:</span>{" "}
             Tópicos de Machine Learning en la Nube
@@ -114,7 +114,7 @@ export default function DocsPage() {
           <li>
             <strong>Ingeniería de características</strong> sobre la serie de
             cierres:
-            <ul className="mt-1 list-disc pl-5 text-sm">
+            <ul className="mt-1 list-disc pl-5 text-base">
               <li>Rezagos (lags): cierre de hoy, de ayer y de hace 5 días.</li>
               <li>Medias móviles de 7, 14 y 30 días.</li>
               <li>Variación porcentual diaria.</li>
@@ -141,7 +141,7 @@ export default function DocsPage() {
       {/* ============ 3. ARQUITECTURA Y MODELO ============ */}
       <DocSection number="3" title="Arquitectura y detalles del modelo">
         <h3 className="font-semibold text-usach-navy">3.1 Arquitectura cloud</h3>
-        <pre className="overflow-x-auto rounded-lg bg-usach-navy p-4 text-xs leading-relaxed text-sky-100">
+        <pre className="overflow-x-auto rounded-lg bg-usach-navy p-4 text-[13px] leading-relaxed text-sky-100">
 {`┌──────────────┐   POST /api/predict    ┌─────────────────────────────┐
 │  Next.js UI  │ ────────────────────▶  │ Python Serverless (Vercel)  │
 │  (frontend)  │  { ticker, start,      │ 1. Descarga datos Yahoo     │
@@ -274,7 +274,7 @@ export default function DocsPage() {
       {/* ============ FICHA TÉCNICA ============ */}
       <DocSection number="6" title="Ficha técnica">
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-sm">
+          <table className="w-full border-collapse text-base">
             <tbody>
               {[
                 ["Frontend", "Next.js 14 + Tailwind CSS + Recharts"],
@@ -315,13 +315,13 @@ function DocSection({
 }) {
   return (
     <section className="print-avoid-break doc-card mb-6 rounded-2xl border border-usach-blue/15 bg-white p-6 shadow-sm print:rounded-none print:border-0 print:px-0 print:shadow-none sm:p-8">
-      <h2 className="mb-4 flex items-center gap-3 text-xl font-bold text-usach-navy">
-        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-usach-blue text-sm font-bold text-white">
+      <h2 className="mb-4 flex items-center gap-3 text-2xl font-bold text-usach-navy">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-usach-blue text-base font-bold text-white">
           {number}
         </span>
         {title}
       </h2>
-      <div className="space-y-3 text-sm leading-relaxed text-slate-700">
+      <div className="space-y-3 text-base leading-relaxed text-slate-700">
         {children}
       </div>
     </section>
