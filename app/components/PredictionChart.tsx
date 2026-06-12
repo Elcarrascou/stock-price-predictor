@@ -52,43 +52,43 @@ export default function PredictionChart({ history, predictions }: Props) {
     <div className="h-[420px] w-full">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#dbe4ec" />
           <XAxis
             dataKey="date"
-            tick={{ fill: "#94a3b8", fontSize: 11 }}
+            tick={{ fill: "#5b7185", fontSize: 11 }}
             minTickGap={32}
           />
           <YAxis
-            tick={{ fill: "#94a3b8", fontSize: 11 }}
+            tick={{ fill: "#5b7185", fontSize: 11 }}
             domain={["auto", "auto"]}
             tickFormatter={fmt}
             width={56}
           />
           <Tooltip
             contentStyle={{
-              background: "#0f172a",
-              border: "1px solid #334155",
+              background: "#ffffff",
+              border: "1px solid #c7d4de",
               borderRadius: 8,
-              color: "#e2e8f0",
+              color: "#1b2a38",
             }}
             formatter={(value, name) =>
               value == null ? ["-", name] : [fmt(Number(value)), name]
             }
           />
-          <Legend wrapperStyle={{ color: "#cbd5e1" }} />
+          <Legend wrapperStyle={{ color: "#33485c" }} />
           {last && (
             <ReferenceLine
               x={last.date}
-              stroke="#f59e0b"
+              stroke="#EA7600"
               strokeDasharray="4 4"
-              label={{ value: "hoy", fill: "#f59e0b", fontSize: 11, position: "top" }}
+              label={{ value: "hoy", fill: "#EA7600", fontSize: 11, position: "top" }}
             />
           )}
           <Line
             type="monotone"
             dataKey="historico"
             name="Histórico"
-            stroke="#38bdf8"
+            stroke="#007FA3"
             strokeWidth={2}
             dot={false}
             connectNulls={false}
@@ -98,7 +98,7 @@ export default function PredictionChart({ history, predictions }: Props) {
             type="monotone"
             dataKey="prediccion"
             name="Predicción"
-            stroke="#34d399"
+            stroke="#EA7600"
             strokeWidth={2}
             strokeDasharray="6 4"
             dot={{ r: 2 }}

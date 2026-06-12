@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import NavBar from "./components/NavBar";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Stock Price Predictor | ML en la Nube",
+  title: "Stock Price Predictor | USACH - ML en la Nube",
   description:
-    "Predicción de precios bursátiles con Random Forest. Tarea Final - Tópicos de Machine Learning en la Nube, USACH.",
+    "Predicción de precios bursátiles con Random Forest. Tarea Final del ramo Tópicos de Machine Learning en la Nube, Magíster en Ciencia de Datos, USACH. Autor: Daniel Carrasco. Profesor: Leonardo Etchegaray.",
 };
 
 export default function RootLayout({
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="text-slate-100 antialiased">{children}</body>
+      <body className="text-usach-ink antialiased">
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
