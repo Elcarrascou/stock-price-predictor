@@ -1,6 +1,22 @@
 "use client";
 
 export default function DocsPage() {
+  function handleDownloadPdf() {
+    // El navegador usa document.title como nombre por defecto del PDF.
+    // Lo cambiamos temporalmente para incluir el nombre del autor y lo
+    // restauramos al terminar la impresion.
+    const originalTitle = document.title;
+    document.title = `${originalTitle} - Daniel Carrasco`;
+    const restore = () => {
+      document.title = originalTitle;
+      window.removeEventListener("afterprint", restore);
+    };
+    window.addEventListener("afterprint", restore);
+    window.print();
+    // Fallback por si afterprint no se dispara en algun navegador.
+    setTimeout(restore, 1000);
+  }
+
   return (
     <main className="mx-auto max-w-4xl px-4 py-10">
       {/* Barra de acciones (no se imprime) */}
@@ -14,7 +30,7 @@ export default function DocsPage() {
           </p>
         </div>
         <button
-          onClick={() => window.print()}
+          onClick={handleDownloadPdf}
           className="flex items-center gap-2 rounded-lg bg-usach-orange px-4 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
         >
           <svg
