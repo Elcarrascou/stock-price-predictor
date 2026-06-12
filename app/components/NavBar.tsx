@@ -15,8 +15,13 @@ export default function NavBar() {
     <header className="no-print sticky top-0 z-20 border-b border-usach-navy/10 bg-usach-navy text-white shadow-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-usach-orange font-bold text-white">
-            SP
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white p-1">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-usach.png"
+              alt="Escudo Universidad de Santiago de Chile"
+              className="h-full w-auto"
+            />
           </div>
           <div className="leading-tight">
             <p className="text-sm font-semibold">Stock Price Predictor</p>

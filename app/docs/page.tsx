@@ -37,9 +37,12 @@ export default function DocsPage() {
 
       {/* ============ PORTADA ============ */}
       <section className="print-page doc-card mb-8 flex min-h-[70vh] flex-col items-center justify-center rounded-2xl border border-usach-blue/15 bg-white p-10 text-center shadow-lg shadow-usach-navy/5 print:min-h-[85vh] print:rounded-none print:border-0 print:shadow-none">
-        <div className="mb-10 flex h-20 w-20 items-center justify-center rounded-2xl bg-usach-navy text-3xl font-bold text-white">
-          <span className="text-usach-orange">S</span>P
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo-usach.png"
+          alt="Escudo Universidad de Santiago de Chile"
+          className="mb-10 h-36 w-auto"
+        />
 
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-usach-blue">
           Universidad de Santiago de Chile

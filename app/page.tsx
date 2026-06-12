@@ -202,6 +202,12 @@ export default function Home() {
       )}
 
       <footer className="mt-12 border-t border-slate-200 pt-6 text-center text-xs text-slate-500">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo-usach.png"
+          alt="Escudo Universidad de Santiago de Chile"
+          className="mx-auto mb-3 h-14 w-auto"
+        />
         <p className="font-medium text-usach-navy">
           Daniel Carrasco · Profesor Leonardo Etchegaray
         </p>
